@@ -6,8 +6,8 @@ from time import sleep
 import framebuf
 from random import randint
 
-sda = Pin(0)
-scl = Pin(1)
+sda = Pin(8)
+scl = Pin(9)
 id = 0
 
 i2c = I2C(id=id, sda=sda, scl=scl)
@@ -225,9 +225,9 @@ def update_gamestate():
 tb = build_toolbar()
 
 # Setup buttons
-button_a = Button(2)
-button_b = Button(3)
-button_x = Button(4)
+button_a = Button(22)
+button_b = Button(26)
+button_x = Button(27)
 
 # Set toolbar index
 index = 0
