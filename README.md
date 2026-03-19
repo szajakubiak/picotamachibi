@@ -25,3 +25,8 @@ Press the A button to move the toolbar selector across the different options, Pr
 
 ## Getting help
 If you have any questions about this, [join our discord](https://action.smarsfan.com/join-discord) server and ask away : )
+
+## TODO
+1. Move pin numbers to variables (*picotamachibi.py*)
+2. Add connection diagram
+3. Implement missing features
