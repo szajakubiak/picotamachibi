@@ -30,3 +30,5 @@ If you have any questions about this, [join our discord](https://action.smarsfan
 1. Move pin numbers to variables (*picotamachibi.py*)
 2. Add connection diagram
 3. Implement missing features
+4. Add Setup section
+5. Implement option to select pull-up or pull-down buttons
