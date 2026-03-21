@@ -17,6 +17,7 @@ oled.init_display()
 print(f"oled: {oled}")
 
 # load icons
+print("Loading icons")
 food = Icon('food.pbm', width=16, height=16, name="food")
 lightbulb = Icon('lightbulb.pbm', width=16, height=16, name="lightbulb")
 game = Icon('game.pbm', width=16, height=16, name="game")
@@ -270,12 +271,14 @@ while True:
         tb.unselect(index, oled)
         
     if button_a.is_pressed:
+        print("button a pressed")
         index += 1
         if index == 7:
             index = 0
         gamestate.states["cancel"] = False
         
     if button_x.is_pressed:
+        print("button x pressed")
         gamestate.states["cancel"] = True
         index = -1
     
@@ -283,6 +286,7 @@ while True:
         tb.select(index, oled)
 
     if button_b.is_pressed:
+        print("button b pressed")
         do_toolbar_stuff()
     
     tb.show(oled) 
