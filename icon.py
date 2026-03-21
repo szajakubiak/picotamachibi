@@ -410,18 +410,17 @@ class Button():
     def __init__(self, pin:int):
         """ Sets up the button """
 
-        self.__pin = Pin(pin, Pin.IN, Pin.PULL_UP)
+        self.__pin = Pin(pin, Pin.IN, Pin.PULL_DOWN)
         self.__pressed = False
 
     @property
     def is_pressed(self)->bool:
         """ Returns the current state of the button """
 
-        if self.__pin.value() == 0:
-            self.__button_down = True
-            print("button pressed")
-            return True
         if self.__pin.value() == 1:
+            self.__button_down = True
+            return True
+        if self.__pin.value() == 0:
             self.__button_down = False
             return False
             # if not self.__button_down:
